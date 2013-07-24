@@ -16,6 +16,10 @@
 		A882DAC817A02A7600076ED0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A882DAC717A02A7600076ED0 /* Default.png */; };
 		A882DACA17A02A7600076ED0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A882DAC917A02A7600076ED0 /* Default@2x.png */; };
 		A882DACC17A02A7600076ED0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A882DACB17A02A7600076ED0 /* Default-568h@2x.png */; };
+		A882DAD617A02AB800076ED0 /* CTFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A882DAD417A02AB800076ED0 /* CTFirstVC.m */; };
+		A882DAD717A02AB800076ED0 /* CTFirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A882DAD517A02AB800076ED0 /* CTFirstVC.xib */; };
+		A882DADB17A02AF400076ED0 /* CTSecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A882DAD917A02AF400076ED0 /* CTSecondVC.m */; };
+		A882DADC17A02AF400076ED0 /* CTSecondVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A882DADA17A02AF400076ED0 /* CTSecondVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,12 @@
 		A882DAC717A02A7600076ED0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A882DAC917A02A7600076ED0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A882DACB17A02A7600076ED0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A882DAD317A02AB800076ED0 /* CTFirstVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTFirstVC.h; sourceTree = "<group>"; };
+		A882DAD417A02AB800076ED0 /* CTFirstVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTFirstVC.m; sourceTree = "<group>"; };
+		A882DAD517A02AB800076ED0 /* CTFirstVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTFirstVC.xib; sourceTree = "<group>"; };
+		A882DAD817A02AF400076ED0 /* CTSecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSecondVC.h; sourceTree = "<group>"; };
+		A882DAD917A02AF400076ED0 /* CTSecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSecondVC.m; sourceTree = "<group>"; };
+		A882DADA17A02AF400076ED0 /* CTSecondVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTSecondVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,7 @@
 		A882DAA917A02A7600076ED0 = {
 			isa = PBXGroup;
 			children = (
+				A882DAD217A02AA100076ED0 /* ViewControllers */,
 				A882DABB17A02A7600076ED0 /* CustomTabBarApplication */,
 				A882DAB417A02A7600076ED0 /* Frameworks */,
 				A882DAB317A02A7600076ED0 /* Products */,
@@ -97,6 +108,19 @@
 				A882DACB17A02A7600076ED0 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A882DAD217A02AA100076ED0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A882DAD317A02AB800076ED0 /* CTFirstVC.h */,
+				A882DAD417A02AB800076ED0 /* CTFirstVC.m */,
+				A882DAD517A02AB800076ED0 /* CTFirstVC.xib */,
+				A882DAD817A02AF400076ED0 /* CTSecondVC.h */,
+				A882DAD917A02AF400076ED0 /* CTSecondVC.m */,
+				A882DADA17A02AF400076ED0 /* CTSecondVC.xib */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +179,8 @@
 				A882DAC817A02A7600076ED0 /* Default.png in Resources */,
 				A882DACA17A02A7600076ED0 /* Default@2x.png in Resources */,
 				A882DACC17A02A7600076ED0 /* Default-568h@2x.png in Resources */,
+				A882DAD717A02AB800076ED0 /* CTFirstVC.xib in Resources */,
+				A882DADC17A02AF400076ED0 /* CTSecondVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +193,8 @@
 			files = (
 				A882DAC217A02A7600076ED0 /* main.m in Sources */,
 				A882DAC617A02A7600076ED0 /* CTAppDelegate.m in Sources */,
+				A882DAD617A02AB800076ED0 /* CTFirstVC.m in Sources */,
+				A882DADB17A02AF400076ED0 /* CTSecondVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +274,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CustomTabBarApplication/CustomTabBarApplication-Prefix.pch";
 				INFOPLIST_FILE = "CustomTabBarApplication/CustomTabBarApplication-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -257,6 +286,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CustomTabBarApplication/CustomTabBarApplication-Prefix.pch";
 				INFOPLIST_FILE = "CustomTabBarApplication/CustomTabBarApplication-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

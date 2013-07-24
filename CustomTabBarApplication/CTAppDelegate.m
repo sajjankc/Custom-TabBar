@@ -7,12 +7,40 @@
 //
 
 #import "CTAppDelegate.h"
+#import "CTFirstVC.h"
+#import "CTSecondVC.h"
 
 @implementation CTAppDelegate
+
+@synthesize tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    self.tabBarController = [[UITabBarController alloc]init]; //Initialize UITabBarController 
+    self.tabBarController.delegate = self; //Set UITabBarController Delegate.
+    
+    //Create object pointer for each ViewController.
+    CTFirstVC *firstVC = [[CTFirstVC alloc]initWithNibName:@"CTFirstVC" bundle:nil];
+    UINavigationController *firstNav = [[UINavigationController alloc]initWithRootViewController:firstVC];
+    firstNav.tabBarItem.title = @"First";
+    firstNav.tabBarItem.image = [UIImage imageNamed:@""]; //Give Your Image Name.
+    firstNav.navigationBar.barStyle = UIBarStyleBlack;
+    
+    CTSecondVC *secondVC = [[CTSecondVC alloc]initWithNibName:@"CTSecondVC" bundle:nil];
+    UINavigationController *secondNav = [[UINavigationController alloc]initWithRootViewController:secondVC];
+    secondNav.tabBarItem.title = @"Second";
+    secondNav.tabBarItem.image = [UIImage imageNamed:@""];
+    secondNav.navigationBar.barStyle = UIBarStyleBlack;
+    
+    //Add all ViewController in UITabBarController.
+    self.tabBarController.moreNavigationController.navigationBar.tintColor = [UIColor blackColor];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:firstNav, secondNav, nil];
+
+    //Finally set UITabBarController as rootViewController
+    self.window.rootViewController = self.tabBarController;
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
